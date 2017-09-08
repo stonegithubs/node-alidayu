@@ -5,8 +5,8 @@
 > npm i node-alidayu --save
 
 # 使用
-````
 ### Promise
+````
 var AliDayu = require('node-alidayu')
 var client = new AliDayu({
   app_key: 'your app key',
@@ -26,7 +26,9 @@ client.sms({
 }).catch(function (err) {
   console.log('fail')
 })
+````
 ### Async / await
+````
 var AliDayu = require('node-alidayu')
 var client = new AliDayu({
   app_key: 'your app key',
@@ -48,7 +50,6 @@ try {
   }
   console.log(result);
 ````
-
 # 支持特性
 - 使用Promise, 不支持callback
 - alibaba.aliqin.fc.sms.num.send (短信发送)
