@@ -36,7 +36,7 @@ var client = new AliDayu({
 })
 let result;
 try {    
-  result = client.sms({
+  result = await client.sms({
     rec_num: 'phone number',
     sms_free_sign_name: '注册验证',
     sms_template_code: 'SMS_2140795',
