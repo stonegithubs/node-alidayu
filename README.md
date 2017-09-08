@@ -6,6 +6,7 @@
 
 # 使用
 ````
+### Promise
 var AliDayu = require('node-alidayu')
 var client = new AliDayu({
   app_key: 'your app key',
@@ -25,6 +26,27 @@ client.sms({
 }).catch(function (err) {
   console.log('fail')
 })
+### Async / await
+var AliDayu = require('node-alidayu')
+var client = new AliDayu({
+  app_key: 'your app key',
+  app_secret: 'your app secret'
+})
+let result;
+try {    
+  result = client.sms({
+    rec_num: 'phone number',
+    sms_free_sign_name: '注册验证',
+    sms_template_code: 'SMS_2140795',
+    sms_param: {
+      code: "4568",
+      product: 'product name'
+    }
+  })
+} catch (err) {
+    console.error(err);
+  }
+  console.log(result);
 ````
 
 # 支持特性
